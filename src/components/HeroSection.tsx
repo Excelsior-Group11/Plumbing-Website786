@@ -40,7 +40,7 @@ const HeroSection = () => {
               <Wrench className="h-6 w-6" /> Get Quick Help
             </a>
           </Button>
-          <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
+          <Button asChild size="lg" className="bg-white hover:bg-gray-100 text-green-500 font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
             <a href="https://wa.me/27835550192" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <MessageCircle className="h-6 w-6" /> Chat on WhatsApp
             </a>

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Wrench, Droplet, Pipe, Faucet } from "lucide-react";
+import { Wrench, Droplet, Pipe, ShowerHead } from "lucide-react"; // Confirmed: ShowerHead is imported
 
 const AnimatedPlumbingTools = () => {
   return (
@@ -18,7 +18,7 @@ const AnimatedPlumbingTools = () => {
         className="absolute bottom-1/4 left-1/3 text-white/10 w-28 h-28 md:w-36 md:h-36 animate-float animate-spin-slow"
         style={{ animationDelay: '0.5s', animationDuration: '4.5s' }}
       />
-      <Faucet
+      <ShowerHead // Confirmed: ShowerHead is used here
         className="absolute top-1/3 right-1/3 text-white/10 w-20 h-20 md:w-28 md:h-28 animate-float animate-spin-slow"
         style={{ animationDelay: '2s', animationDuration: '3.8s' }}
       />

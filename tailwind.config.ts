@@ -25,8 +25,8 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "hsl(var(--blue-primary))", // Using new primary blue
+          foreground: "hsl(var(--primary-foreground))", // White
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -52,6 +52,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // New custom colors
+        "blue-primary": "hsl(var(--blue-primary))",
+        "navy-deep": "hsl(var(--navy-deep))",
+        "aqua-soft": "hsl(var(--aqua-soft))",
+        "gray-light": "hsl(var(--gray-light))",
+        "orange-accent": "hsl(var(--orange-accent))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -85,10 +91,32 @@ export default {
             height: "0",
           },
         },
+        "fade-in-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        "bounce-in": {
+          "0%": { transform: "scale(0.3)", opacity: "0" },
+          "50%": { transform: "scale(1.05)", opacity: "1" },
+          "70%": { transform: "scale(0.9)" },
+          "100%": { transform: "scale(1)" },
+        },
+        "underline-grow": {
+          from: { transform: "scaleX(0)" },
+          to: { transform: "scaleX(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+        "float": "float 3s ease-in-out infinite",
+        "bounce-in": "bounce-in 0.8s ease-out forwards",
+        "underline-grow": "underline-grow 0.3s ease-out forwards",
       },
     },
   },

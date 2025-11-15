@@ -6,11 +6,11 @@ import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
-import AboutSection from "@/components/AboutSection";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection"; // Updated import
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CallToActionBanner from "@/components/CallToActionBanner";
 import ContactSection from "@/components/ContactSection";
-import { MadeWithDyad } from "@/components/made-with-dyad"; // Keeping this as per existing structure
+import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
   return (
@@ -19,7 +19,7 @@ const Index = () => {
       <main className="flex-grow">
         <HeroSection />
         <ServicesSection />
-        <AboutSection />
+        <WhyChooseUsSection /> {/* Updated component name */}
         <TestimonialsSection />
         <CallToActionBanner />
         <ContactSection />

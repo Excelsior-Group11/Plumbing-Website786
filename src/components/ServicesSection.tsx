@@ -2,32 +2,37 @@
 
 import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Wrench, Droplet, ShowerHead, Plug, Clock } from "lucide-react";
+import ServiceIcon3D from "./ServiceIcon3D"; // Import the new 3D icon component
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: Droplet,
-      title: "Leak Repairs",
+      threeDIconType: "leak",
+      title: "Leak Detection & Repair",
       description: "Stop water damage fast with expert leak detection and repair.",
     },
     {
-      icon: ShowerHead,
+      threeDIconType: "geyser",
       title: "Geyser Installation & Repairs",
       description: "Efficient, SABS-approved geyser services to keep your hot water running.",
     },
     {
-      icon: Plug, // Using Plug as a generic icon for drains
+      threeDIconType: "drain",
       title: "Drain Unblocking",
       description: "Quick, clean drain clearing — no mess, no stress.",
     },
     {
-      icon: Wrench,
-      title: "Bathroom Renovations",
-      description: "From design to installation, we create bathrooms that work beautifully.",
+      threeDIconType: "pipe",
+      title: "Pipe Repairs & Installation",
+      description: "From burst pipes to new installations, we ensure durable plumbing.",
     },
     {
-      icon: Clock,
+      threeDIconType: "tap",
+      title: "Tap & Fixture Installation",
+      description: "Professional installation of taps, toilets, showers, and more.",
+    },
+    {
+      threeDIconType: "emergency",
       title: "Emergency Plumbing (24/7)",
       description: "We’re always on call for urgent plumbing problems.",
     },
@@ -47,8 +52,8 @@ const ServicesSection = () => {
                          hover:shadow-xl hover:translate-y-[-4px] transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${0.1 * index + 0.2}s` }}
             >
-              <div className="bg-blue-primary/10 text-blue-primary p-4 rounded-full mb-4 shadow-md">
-                <service.icon size={36} />
+              <div className="mb-4">
+                <ServiceIcon3D type={service.threeDIconType} size={80} /> {/* Integrated 3D Icon */}
               </div>
               <CardHeader className="p-0 mb-2">
                 <CardTitle className="text-xl font-semibold text-navy-deep font-['Outfit',_sans-serif]">

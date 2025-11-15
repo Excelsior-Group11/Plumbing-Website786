@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Wrench } from "lucide-react"; // Added Wrench icon
+import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -39,10 +39,8 @@ const Header = () => {
               {link.name}
             </a>
           ))}
-          <Button asChild className="ml-4 bg-orange-accent hover:bg-orange-accent/90 text-green-500 font-bold text-base px-6 py-3 rounded-full shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">
-            <a href="tel:0835550192" className="flex items-center gap-2">
-              <Wrench className="h-6 w-6" /> Get Quick Help
-            </a>
+          <Button asChild className="ml-4 bg-orange-accent hover:bg-orange-accent/90 text-navy-deep font-bold text-base px-6 py-3 rounded-full shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">
+            <a href="tel:0835550192">📞 Get Quick Help</a>
           </Button>
         </nav>
 
@@ -66,10 +64,8 @@ const Header = () => {
                   {link.name}
                 </a>
               ))}
-              <Button asChild className="mt-4 bg-orange-accent hover:bg-orange-accent/90 text-green-500 font-bold text-base px-6 py-3 rounded-full shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">
-                <a href="tel:0835550192" onClick={handleNavLinkClick} className="flex items-center gap-2">
-                  <Wrench className="h-6 w-6" /> Get Quick Help
-                </a>
+              <Button asChild className="mt-4 bg-orange-accent hover:bg-orange-accent/90 text-navy-deep font-bold text-base px-6 py-3 rounded-full shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">
+                <a href="tel:0835550192" onClick={handleNavLinkClick}>📞 Get Quick Help</a>
               </Button>
             </nav>
           </SheetContent>

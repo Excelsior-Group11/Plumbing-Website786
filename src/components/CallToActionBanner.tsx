@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react"; // Reverted to MessageCircle
+import { MessageCircle, Wrench } from "lucide-react"; // Added Wrench icon
 
 const CallToActionBanner = () => {
   return (
@@ -15,8 +15,10 @@ const CallToActionBanner = () => {
           Don’t wait for water damage — our team is standing by to help you right now.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button asChild size="lg" className="bg-orange-accent hover:bg-orange-accent/90 text-navy-deep font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
-            <a href="tel:0835550192">📞 Get Quick Help</a>
+          <Button asChild size="lg" className="bg-orange-accent hover:bg-orange-accent/90 text-green-500 font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
+            <a href="tel:0835550192" className="flex items-center gap-2">
+              <Wrench className="h-6 w-6" /> Get Quick Help
+            </a>
           </Button>
           <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
             <a href="https://wa.me/27835550192" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">

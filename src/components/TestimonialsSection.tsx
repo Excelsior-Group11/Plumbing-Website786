@@ -9,17 +9,17 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Sarah M.",
-      review: "Fantastic service! Jeff arrived within 30 minutes and fixed our burst pipe in no time. Highly recommend their emergency service!",
+      review: "Fantastic service! Jeff arrived within 30 minutes and fixed our burst pipe in no time.",
       avatar: "/placeholder.svg", // Placeholder for avatar
     },
     {
       name: "Lebo T.",
-      review: "Professional and friendly — they redid our bathroom plumbing perfectly. The team was tidy and efficient.",
+      review: "Professional and friendly — they redid our bathroom plumbing perfectly.",
       avatar: "/placeholder.svg", // Placeholder for avatar
     },
     {
       name: "Thabo R.",
-      review: "Affordable, honest, and efficient. Jeff’s Plumber is my go-to for all plumbing needs. Great communication throughout the process.",
+      review: "Affordable, honest, and efficient. Highly recommended!",
       avatar: "/placeholder.svg", // Placeholder for avatar
     },
   ];

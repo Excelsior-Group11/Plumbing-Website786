@@ -109,6 +109,10 @@ export default {
           from: { transform: "scaleX(0)" },
           to: { transform: "scaleX(1)" },
         },
+        "spin-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -117,6 +121,7 @@ export default {
         "float": "float 3s ease-in-out infinite",
         "bounce-in": "bounce-in 0.8s ease-out forwards",
         "underline-grow": "underline-grow 0.3s ease-out forwards",
+        "spin-slow": "spin-slow 10s linear infinite",
       },
     },
   },

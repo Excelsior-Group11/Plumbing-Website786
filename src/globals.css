@@ -144,6 +144,15 @@
   }
 }
 
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
   opacity: 0; /* Start hidden */
@@ -177,4 +186,8 @@
 .animate-underline-grow:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
 }

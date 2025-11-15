@@ -3,6 +3,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
+import AnimatedPlumbingTools from "./AnimatedPlumbingTools"; // Import the new component
 
 const HeroSection = () => {
   return (
@@ -10,6 +11,9 @@ const HeroSection = () => {
       id="home"
       className="relative bg-gradient-to-br from-blue-primary to-navy-deep text-white py-24 md:py-40 overflow-hidden rounded-b-[3rem] shadow-xl"
     >
+      {/* Animated plumbing tools in the background */}
+      <AnimatedPlumbingTools />
+
       {/* Background elements for visual interest */}
       <div className="absolute inset-0 opacity-10">
         <img

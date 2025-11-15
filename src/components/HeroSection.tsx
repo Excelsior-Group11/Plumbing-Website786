@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Whatsapp } from "lucide-react"; // Changed from MessageCircle to Whatsapp
+import { CheckCircle, MessageCircle } from "lucide-react"; // Reverted to MessageCircle
 import AnimatedPlumbingTools from "./AnimatedPlumbingTools"; // Import the new component
 
 const HeroSection = () => {
@@ -40,7 +40,7 @@ const HeroSection = () => {
           </Button>
           <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
             <a href="https://wa.me/27835550192" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-              <Whatsapp className="h-6 w-6" /> Chat on WhatsApp
+              <MessageCircle className="h-6 w-6" /> Chat on WhatsApp
             </a>
           </Button>
         </div>

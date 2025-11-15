@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Environment } from "@react-three/drei";
+import { Environment } from "@react-three/drei";
 import * as THREE from "three";
 
 interface ServiceIcon3DProps {
@@ -35,43 +35,9 @@ const ThreeDModel = ({ type }: { type: ServiceIcon3DProps["type"] }) => {
     metalness: 0.3,
   };
 
+  // Temporarily simplify to a single box to debug
   const renderShape = () => {
-    switch (type) {
-      case "leak":
-        return <sphereGeometry args={[0.5, 32, 32]} />; // Water droplet
-      case "drain":
-        return <torusGeometry args={[0.4, 0.15, 16, 32]} />; // Drain opening
-      case "pipe":
-        return <cylinderGeometry args={[0.3, 0.3, 1.2, 32]} />; // Pipe segment
-      case "tap":
-        return (
-          <group>
-            <boxGeometry args={[0.2, 0.8, 0.2]} /> {/* Vertical part */}
-            <mesh position={[0.4, 0.3, 0]}>
-              <boxGeometry args={[0.8, 0.2, 0.2]} /> {/* Horizontal spout */}
-            </mesh>
-            <mesh position={[-0.1, 0.6, 0.15]}>
-              <sphereGeometry args={[0.15, 16, 16]} /> {/* Knob */}
-            </mesh>
-          </group>
-        );
-      case "geyser":
-        return <cylinderGeometry args={[0.4, 0.4, 1.5, 32]} />; // Geyser tank
-      case "emergency":
-        return (
-          <group>
-            <boxGeometry args={[0.8, 0.8, 0.2]} /> {/* Clock face */}
-            <mesh position={[0, 0, 0.15]}>
-              <cylinderGeometry args={[0.05, 0.05, 0.3, 16]} /> {/* Hour hand */}
-            </mesh>
-            <mesh position={[0.1, 0, 0.15]} rotation={[0, 0, -Math.PI / 2]}>
-              <cylinderGeometry args={[0.05, 0.05, 0.5, 16]} /> {/* Minute hand */}
-            </mesh>
-          </group>
-        );
-      default:
-        return <boxGeometry args={[1, 1, 1]} />;
-    }
+    return <boxGeometry args={[0.8, 0.8, 0.8]} />;
   };
 
   return (

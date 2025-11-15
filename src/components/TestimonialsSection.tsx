@@ -52,11 +52,13 @@ const TestimonialsSection = () => {
             align: "start",
             loop: true,
           }}
-          className="w-full max-w-5xl mx-auto animate-fade-in-up delay-200"
+          // Added px-8 for internal padding and adjusted max-w for better button visibility
+          className="w-full max-w-5xl mx-auto px-8 animate-fade-in-up delay-200"
         >
           <CarouselContent className="-ml-4">
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+              // Adjusted basis for smaller screens to make review boxes slightly narrower
+              <CarouselItem key={index} className="pl-4 basis-[90%] md:basis-1/2 lg:basis-1/3">
                 <Card className="p-6 flex flex-col items-center text-center shadow-lg rounded-xl bg-white h-full">
                   <Avatar className="h-20 w-20 mb-4 shadow-md">
                     <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
@@ -81,8 +83,9 @@ const TestimonialsSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-[-2rem] top-1/2 -translate-y-1/2 bg-blue-primary text-white hover:bg-blue-primary/90" />
-          <CarouselNext className="absolute right-[-2rem] top-1/2 -translate-y-1/2 bg-blue-primary text-white hover:bg-blue-primary/90" />
+          {/* Positioned buttons at the edge of the carousel's padding */}
+          <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-blue-primary text-white hover:bg-blue-primary/90" />
+          <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-blue-primary text-white hover:bg-blue-primary/90" />
         </Carousel>
       </div>
     </section>

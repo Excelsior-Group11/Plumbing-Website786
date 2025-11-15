@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { Whatsapp } from "lucide-react"; // Changed from MessageCircle to Whatsapp
 
 const WhatsAppButton = () => {
   return (
@@ -17,7 +17,7 @@ const WhatsAppButton = () => {
         className="h-16 w-16 rounded-full shadow-lg bg-green-500 hover:bg-green-600 hover:scale-110 transition-transform duration-300"
         aria-label="Chat on WhatsApp"
       >
-        <MessageCircle className="h-9 w-9 text-white" />
+        <Whatsapp className="h-9 w-9 text-white" />
       </Button>
     </a>
   );

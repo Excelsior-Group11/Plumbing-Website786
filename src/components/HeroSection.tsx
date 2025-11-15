@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, MessageCircle } from "lucide-react"; // Reverted to MessageCircle
+import { CheckCircle, MessageCircle, Wrench } from "lucide-react"; // Import Wrench icon
 import AnimatedPlumbingTools from "./AnimatedPlumbingTools"; // Import the new component
 
 const HeroSection = () => {
@@ -35,8 +35,10 @@ const HeroSection = () => {
           Jeff’s Plumber delivers professional, affordable plumbing services across Johannesburg. Whether it’s a leaking tap or a burst geyser, we’ve got you covered — any time, day or night.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-600">
-          <Button asChild size="lg" className="bg-orange-accent hover:bg-orange-accent/90 text-navy-deep font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
-            <a href="tel:0835550192">📞 Get Quick Help</a>
+          <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
+            <a href="tel:0835550192" className="flex items-center gap-2">
+              <Wrench className="h-6 w-6" /> Get Quick Help
+            </a>
           </Button>
           <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
             <a href="https://wa.me/27835550192" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">

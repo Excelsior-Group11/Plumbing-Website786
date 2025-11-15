@@ -1,12 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "#services" },
@@ -14,6 +16,10 @@ const Header = () => {
     { name: "Testimonials", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
   ];
+
+  const handleNavLinkClick = () => {
+    setIsSheetOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-navy-deep/20 bg-navy-deep text-white shadow-lg">
@@ -39,7 +45,7 @@ const Header = () => {
         </nav>
 
         {/* Mobile Navigation */}
-        <Sheet>
+        <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild className="md:hidden">
             <Button variant="outline" size="icon" className="bg-white text-navy-deep hover:bg-gray-100">
               <Menu className="h-6 w-6" />
@@ -52,13 +58,14 @@ const Header = () => {
                 <a
                   key={link.name}
                   href={link.href}
+                  onClick={handleNavLinkClick}
                   className="text-lg font-medium text-white hover:text-orange-accent transition-colors animate-underline-grow"
                 >
                   {link.name}
                 </a>
               ))}
               <Button asChild className="mt-4 bg-orange-accent hover:bg-orange-accent/90 text-navy-deep font-bold text-base px-6 py-3 rounded-full shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">
-                <a href="tel:0835550192">📞 Get Quick Help</a>
+                <a href="tel:0835550192" onClick={handleNavLinkClick}>📞 Get Quick Help</a>
               </Button>
             </nav>
           </SheetContent>

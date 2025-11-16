@@ -4,8 +4,11 @@ import React from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/HeroSection";
+import ProblemSection from "@/components/ProblemSection";
 import ServicesSection from "@/components/ServicesSection";
-import WhyChooseUsSection from "@/components/WhyChooseUsSection";
+import ValuePropositionSection from "@/components/ValuePropositionSection";
+import ProofSection from "@/components/ProofSection";
+import ProcessSection from "@/components/ProcessSection";
 import CallToActionSection from "@/components/CallToActionSection";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
@@ -15,8 +18,11 @@ const Index = () => {
       <Header />
       <main className="flex-grow">
         <HeroSection />
+        <ProblemSection />
         <ServicesSection />
-        <WhyChooseUsSection />
+        <ValuePropositionSection />
+        <ProofSection />
+        <ProcessSection />
         <CallToActionSection />
       </main>
       <Footer />

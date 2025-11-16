@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone, Globe } from "lucide-react";
+import { Mail, Phone, Globe, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -29,13 +29,25 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-2 text-sm text-muted-foreground hover:text-neon-blue transition-colors">
               <Phone size={16} />
-              <a href="tel:0798792466">079 879 2466</a>
+              <a href="tel:0795174640">079 517 4640</a>
             </li>
           </ul>
         </div>
 
-        {/* Placeholder for future links/socials */}
-        <div>
+        {/* Social Media & Quick Links */}
+        <div className="flex flex-col items-center md:items-start">
+          <h3 className="text-lg font-semibold mb-4">Connect</h3>
+          <div className="flex space-x-4 mb-4">
+            <a href="#" className="text-muted-foreground hover:text-neon-blue transition-colors" aria-label="LinkedIn">
+              <Linkedin size={20} />
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-neon-blue transition-colors" aria-label="Twitter">
+              <Twitter size={20} />
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-neon-blue transition-colors" aria-label="Instagram">
+              <Instagram size={20} />
+            </a>
+          </div>
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li><a href="#services" className="text-sm text-muted-foreground hover:text-neon-blue transition-colors">Services</a></li>

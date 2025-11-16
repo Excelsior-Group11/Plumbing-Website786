@@ -2,29 +2,29 @@
 
 import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Bot, Code, GitFork, CalendarCheck } from "lucide-react";
+import { Bot, Code, GitFork, CalendarCheck, ArrowRight } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
       icon: Bot,
-      title: "AI Customer Support Automation",
-      description: "Deploy intelligent chatbots and virtual assistants to handle inquiries 24/7, improving response times and customer satisfaction.",
+      title: "AI Customer Support",
+      description: "24/7 instant replies. No missed leads, improved customer satisfaction.",
     },
     {
       icon: Code,
       title: "AI-Driven Website Development",
-      description: "Build dynamic, personalized websites with AI-powered content generation, user experience optimization, and predictive analytics.",
+      description: "Modern, high-converting sites powered by built-in automation and personalized experiences.",
     },
     {
       icon: GitFork,
-      title: "CRM Integrations & Workflows",
-      description: "Streamline your sales and marketing with seamless AI integrations into your CRM, automating lead nurturing and data management.",
+      title: "CRM Integrations",
+      description: "Connect all your tools: HubSpot, Zoho, GoHighLevel, Notion, Airtable for seamless workflows.",
     },
     {
       icon: CalendarCheck,
-      title: "AI Appointment Setting Systems",
-      description: "Automate your scheduling with AI-powered systems that qualify leads, book appointments, and manage calendars efficiently.",
+      title: "AI Appointment Setting",
+      description: "Fully automated booking systems that qualify leads and fill your calendar efficiently.",
     },
   ];
 
@@ -32,9 +32,9 @@ const ServicesSection = () => {
     <section id="services" className="py-16 md:py-24 bg-black-primary text-text-light">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-bold mb-12 animate-slide-up">
-          Our AI Automation Services
+          We Build Smart Systems That Run Your Business Automatically.
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {services.map((service, index) => (
             <Card
               key={index}
@@ -56,6 +56,9 @@ const ServicesSection = () => {
             </Card>
           ))}
         </div>
+        <a href="#contact" className="text-neon-blue hover:text-neon-purple transition-colors flex items-center justify-center gap-2 text-lg font-medium animate-slide-up delay-500">
+          Explore Services <ArrowRight className="h-5 w-5" />
+        </a>
       </div>
     </section>
   );

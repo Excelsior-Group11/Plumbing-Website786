@@ -11,7 +11,7 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      {/* Removed the conflicting Toaster component */}
+      {/* Removed the conflicting Toaster component import and usage */}
       <Sonner />
       <BrowserRouter>
         <Routes>

@@ -4,63 +4,64 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* White */
-    --foreground: 222.2 84% 4.9%; /* Default dark text */
+    --background: 222.2 84% 4.9%; /* Dark background */
+    --foreground: 0 0% 100%; /* White text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 100%;
 
     --primary: 210 40% 98%; /* White for primary-foreground */
     --primary-foreground: 222.2 47.4% 11.2%; /* Default dark text */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
 
-    --radius: 0.75rem; /* Slightly more rounded corners */
+    --radius: 0.75rem;
 
-    /* Custom Colors for Jeff's Plumber */
-    --blue-primary: 210 79% 50%; /* #1E88E5 */
-    --navy-deep: 218 82% 34%; /* #0D47A1 */
-    --aqua-soft: 210 100% 94%; /* #E3F2FD */
-    --gray-light: 0 0% 96%; /* #F5F5F5 */
-    --orange-accent: 33 100% 65%; /* #FF9800 */
+    /* Custom Colors for Tricore Solutions */
+    --black-primary: 222.2 84% 4.9%; /* Near black */
+    --dark-gray-bg: 217.2 32.6% 17.5%; /* Darker gray for cards/sections */
+    --neon-blue: 217 91.2% 59.8%; /* Bright blue */
+    --neon-purple: 270 80% 60%; /* Bright purple */
+    --text-light: 0 0% 98%; /* Off-white for main text */
 
     /* Sidebar colors (keeping existing for now, not directly used in landing page) */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
+    /* Already set for dark theme, ensuring consistency */
     --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --foreground: 0 0% 100%;
 
     --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card-foreground: 0 0% 100%;
 
     --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover-foreground: 0 0% 100%;
 
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
@@ -81,12 +82,12 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
 
-    /* Custom Dark Mode Colors (adjusting for new palette) */
-    --blue-primary: 210 79% 50%; /* #1E88E5 */
-    --navy-deep: 218 82% 34%; /* #0D47A1 */
-    --aqua-soft: 210 100% 94%; /* #E3F2FD */
-    --gray-light: 0 0% 96%; /* #F5F5F5 */
-    --orange-accent: 33 100% 65%; /* #FF9800 */
+    /* Custom Dark Mode Colors (same as light mode for this dark-first theme) */
+    --black-primary: 222.2 84% 4.9%;
+    --dark-gray-bg: 217.2 32.6% 17.5%;
+    --neon-blue: 217 91.2% 59.8%;
+    --neon-purple: 270 80% 60%;
+    --text-light: 0 0% 98%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -106,88 +107,49 @@
 
   body {
     @apply bg-background text-foreground;
-    scroll-behavior: smooth; /* Smooth scroll transitions */
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif; /* Default font */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif; /* Headline font */
   }
 }
 
 /* Custom Animations */
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-neon-glow {
+  animation: neon-glow 1.5s ease-in-out infinite;
+}
+
+.animate-particle-float {
+  animation: particle-float 15s ease-in-out infinite;
+}
+
+/* Subtle background grid/noise effect */
+.background-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: background-grid 60s linear infinite;
+}
+
+/* Responsive adjustments for animations */
+@media (max-width: 768px) {
+  .animate-particle-float {
+    animation-duration: 20s; /* Slower on mobile */
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
-}
-
-@keyframes bounce-in {
-  0% { transform: scale(0.3); opacity: 0; }
-  50% { transform: scale(1.05); opacity: 1; }
-  70% { transform: scale(0.9); }
-  100% { transform: scale(1); }
-}
-
-@keyframes underline-grow {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
-  opacity: 0; /* Start hidden */
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-bounce-in {
-  animation: bounce-in 0.8s ease-out forwards;
-}
-
-.animate-underline-grow {
-  position: relative;
-}
-
-.animate-underline-grow::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: currentColor;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s ease-out;
-}
-
-.animate-underline-grow:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.animate-spin-slow {
-  animation: spin-slow 10s linear infinite;
 }

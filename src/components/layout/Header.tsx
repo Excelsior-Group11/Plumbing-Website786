@@ -39,7 +39,15 @@ const Header = () => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/" className="flex items-center gap-2">
-          {/* Removed img tag, displaying text logo more prominently */}
+          <img
+            src="/Logo.png" // Using the new logo image
+            alt="Tricore Solutions Logo"
+            className="h-12 w-12 rounded-full object-cover"
+            loading="lazy"
+            onError={(e) => {
+              e.currentTarget.src = "/placeholder.svg"; // Fallback to a placeholder if it fails
+            }}
+          />
           <span className="text-2xl font-bold text-brand-text-light hover:text-brand-primary-color transition-colors">
             Tricore Solutions
           </span>

@@ -39,18 +39,21 @@ const Header = () => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/" className="flex items-center gap-2">
-          <img
-            src="/Logo.png" // Using the new logo image
-            alt="Tricore Solutions Logo"
-            className="max-h-12 h-auto w-auto rounded-full opacity-90" // Added rounded-full and opacity-90
-            loading="lazy"
-            onError={(e) => {
-              e.currentTarget.src = "/placeholder.svg"; // Fallback to a placeholder if it fails
-            }}
-          />
-          <span className="text-2xl font-bold text-brand-text-light hover:text-brand-primary-color transition-colors">
-            Tricore Solutions
-          </span>
+          {/* Wrap img and span in a div to ensure Link has a single child, addressing React.Children.only error */}
+          <div className="flex items-center gap-2">
+            <img
+              src="/Logo.png" // Using the new logo image
+              alt="Tricore Solutions Logo"
+              className="max-h-12 h-auto w-auto rounded-full opacity-90" // Added rounded-full and opacity-90
+              loading="lazy"
+              onError={(e) => {
+                e.currentTarget.src = "/placeholder.svg"; // Fallback to a placeholder if it fails
+              }}
+            />
+            <span className="text-2xl font-bold text-brand-text-light hover:text-brand-primary-color transition-colors">
+              Tricore Solutions
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

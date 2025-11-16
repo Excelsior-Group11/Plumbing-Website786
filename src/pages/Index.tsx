@@ -3,29 +3,23 @@
 import React from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
-import WhyChooseUsSection from "@/components/WhyChooseUsSection"; // Updated import
-import TestimonialsSection from "@/components/TestimonialsSection";
-import CallToActionBanner from "@/components/CallToActionBanner";
-import ContactSection from "@/components/ContactSection";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection";
+import CallToActionSection from "@/components/CallToActionSection";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-black-primary text-text-light">
       <Header />
       <main className="flex-grow">
         <HeroSection />
         <ServicesSection />
-        <WhyChooseUsSection /> {/* Updated component name */}
-        <TestimonialsSection />
-        <CallToActionBanner />
-        <ContactSection />
+        <WhyChooseUsSection />
+        <CallToActionSection />
       </main>
       <Footer />
-      <WhatsAppButton />
       <MadeWithDyad />
     </div>
   );

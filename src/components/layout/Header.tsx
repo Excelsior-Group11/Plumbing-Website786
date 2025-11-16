@@ -42,10 +42,9 @@ const Header = () => {
           <img
             src="/Logo.jpg"
             alt="Tricore Solutions Logo"
-            className="h-8 w-auto bg-red-500" // Added temporary red background for visibility
+            className="h-8 w-auto"
             loading="lazy"
             onError={(e) => {
-              console.error("Error loading logo image:", e.currentTarget.src);
               e.currentTarget.src = "/placeholder.svg"; // Fallback to a placeholder if it fails
             }}
           />

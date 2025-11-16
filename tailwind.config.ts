@@ -124,6 +124,10 @@ export default {
           "0%": { "background-position": "0% 0%" },
           "100%": { "background-position": "100% 100%" },
         },
+        "fill-progress": { /* New keyframe for appointment setting progress bar */
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -134,6 +138,7 @@ export default {
         "brand-glow": "brand-glow 1.5s ease-in-out infinite", /* New animation */
         "particle-float": "particle-float 15s ease-in-out infinite",
         "background-grid": "background-grid 60s linear infinite",
+        "fill-progress": "fill-progress 2s ease-out infinite alternate", /* New animation */
       },
       boxShadow: {
         "brand-glow": "0 0 8px hsl(var(--brand-primary-color)), 0 0 15px hsl(var(--brand-accent-color))",

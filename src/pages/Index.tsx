@@ -5,7 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
-import ServicesSection from "@/components/ServicesSection";
+// import ServicesSection from "@/components/ServicesSection"; // Removed
 import ValuePropositionSection from "@/components/ValuePropositionSection";
 import ProofSection from "@/components/ProofSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -19,7 +19,7 @@ const Index = () => {
       <main className="flex-grow">
         <HeroSection />
         <ProblemSection />
-        <ServicesSection />
+        {/* ServicesSection removed, now on its own page */}
         <ValuePropositionSection />
         <ProofSection />
         <ProcessSection />

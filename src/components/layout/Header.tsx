@@ -25,7 +25,7 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Services", href: "/services" }, // Updated to new services page route
+    { name: "Services", href: "#services" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
@@ -39,21 +39,18 @@ const Header = () => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/" className="flex items-center gap-2">
-          {/* Wrap img and span in a div to ensure Link has a single child, addressing React.Children.only error */}
-          <div className="flex items-center gap-2">
-            <img
-              src="/Logo.png" // Using the new logo image
-              alt="Tricore Solutions Logo"
-              className="max-h-12 h-auto w-auto rounded-full opacity-90" // Added rounded-full and opacity-90
-              loading="lazy"
-              onError={(e) => {
-                e.currentTarget.src = "/placeholder.svg"; // Fallback to a placeholder if it fails
-              }}
-            />
-            <span className="text-2xl font-bold text-brand-text-light hover:text-brand-primary-color transition-colors">
-              Tricore Solutions
-            </span>
-          </div>
+          <img
+            src="/Logo.png" // Using the new logo image
+            alt="Tricore Solutions Logo"
+            className="max-h-12 h-auto w-auto rounded-full opacity-90" // Added rounded-full and opacity-90
+            loading="lazy"
+            onError={(e) => {
+              e.currentTarget.src = "/placeholder.svg"; // Fallback to a placeholder if it fails
+            }}
+          />
+          <span className="text-2xl font-bold text-brand-text-light hover:text-brand-primary-color transition-colors">
+            Tricore Solutions
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -68,7 +65,7 @@ const Header = () => {
             </a>
           ))}
           <Button asChild className="ml-4 bg-gradient-to-r from-brand-primary-color to-brand-secondary-color text-brand-text-light font-bold text-base px-6 py-3 rounded-full shadow-brand-glow hover:scale-105 transition-all duration-300">
-            <a href="#contact">Book a Call</a> {/* Changed "Login" to "Book a Call" */}
+            <a href="#contact">Login</a>
           </Button>
         </nav>
 
@@ -92,7 +89,7 @@ const Header = () => {
                 </a>
               ))}
               <Button asChild className="mt-4 bg-gradient-to-r from-brand-primary-color to-brand-secondary-color text-brand-text-light font-bold text-base px-6 py-3 rounded-full shadow-brand-glow hover:scale-105 transition-all duration-300">
-                <a href="#contact">Book a Call</a> {/* Changed "Login" to "Book a Call" */}
+                <a href="#contact">Login</a>
               </Button>
             </nav>
           </SheetContent>

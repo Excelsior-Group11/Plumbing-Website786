@@ -58,6 +58,12 @@ export default {
         "neon-blue": "hsl(var(--neon-blue))",
         "neon-purple": "hsl(var(--neon-purple))",
         "text-light": "hsl(var(--text-light))",
+        // NEW BRAND COLORS from Logo
+        "brand-primary-bg": "hsl(var(--brand-primary-bg))",
+        "brand-text-light": "hsl(var(--brand-text-light))",
+        "brand-accent-cyan": "hsl(var(--brand-accent-cyan))",
+        "brand-accent-blue": "hsl(var(--brand-accent-blue))",
+        "brand-accent-light-blue": "hsl(var(--brand-accent-light-blue))",
         // Keeping sidebar colors for now, though not directly used on landing page
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -112,6 +118,15 @@ export default {
             "box-shadow": "0 0 10px var(--neon-blue), 0 0 20px var(--neon-purple)",
           },
         },
+        // NEW: Brand specific glow for nav bar button
+        "brand-glow": {
+          "0%, 100%": {
+            "box-shadow": "0 0 5px hsl(var(--brand-accent-cyan)), 0 0 10px hsl(var(--brand-accent-blue))",
+          },
+          "50%": {
+            "box-shadow": "0 0 10px hsl(var(--brand-accent-cyan)), 0 0 20px hsl(var(--brand-accent-blue))",
+          },
+        },
         "particle-float": {
           "0%": { transform: "translate(0, 0) rotate(0deg)" },
           "25%": { transform: "translate(10px, -10px) rotate(5deg)" },
@@ -131,12 +146,14 @@ export default {
         "slide-up": "slide-up 0.8s ease-out forwards",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
         "neon-glow": "neon-glow 1.5s ease-in-out infinite",
+        "brand-glow": "brand-glow 1.5s ease-in-out infinite", // NEW
         "particle-float": "particle-float 15s ease-in-out infinite",
         "background-grid": "background-grid 60s linear infinite",
       },
       boxShadow: {
         "neon-glow": "0 0 8px hsl(var(--neon-blue)), 0 0 15px hsl(var(--neon-purple))",
         "neon-glow-md": "0 0 10px hsl(var(--neon-blue)/0.5), 0 0 20px hsl(var(--neon-purple)/0.5)",
+        "brand-glow": "0 0 8px hsl(var(--brand-accent-cyan)), 0 0 15px hsl(var(--brand-accent-blue))", // NEW
       },
     },
   },

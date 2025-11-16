@@ -42,7 +42,7 @@ const Header = () => {
           <img
             src="/Logo.png" // Using the new logo image
             alt="Tricore Solutions Logo"
-            className="max-h-12 h-auto w-auto" // Adjusted classes to remove fixed crop
+            className="max-h-12 h-auto w-auto rounded-full opacity-90" // Added rounded-full and opacity-90
             loading="lazy"
             onError={(e) => {
               e.currentTarget.src = "/placeholder.svg"; // Fallback to a placeholder if it fails

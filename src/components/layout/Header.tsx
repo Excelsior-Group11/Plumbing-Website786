@@ -42,7 +42,7 @@ const Header = () => {
           <img
             src="/Logo.png"
             alt="Tricore Solutions Logo"
-            className="h-12 w-auto rounded-full"
+            className="h-12 w-12 rounded-full object-cover" {/* Updated: Added w-12 and object-cover */}
             loading="lazy"
             onError={(e) => {
               e.currentTarget.src = "/placeholder.svg"; // Fallback to a placeholder if it fails

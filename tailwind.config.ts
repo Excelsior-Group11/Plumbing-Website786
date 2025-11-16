@@ -25,8 +25,8 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "hsl(var(--blue-primary))", // Using new primary blue
+          foreground: "hsl(var(--primary-foreground))", // White
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -52,13 +52,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom Colors for Tricore Solutions
-        "black-primary": "hsl(var(--black-primary))",
-        "dark-gray-bg": "hsl(var(--dark-gray-bg))",
-        "neon-blue": "hsl(var(--neon-blue))",
-        "neon-purple": "hsl(var(--neon-purple))",
-        "text-light": "hsl(var(--text-light))",
-        // Keeping sidebar colors for now, though not directly used on landing page
+        // New custom colors
+        "blue-primary": "hsl(var(--blue-primary))",
+        "navy-deep": "hsl(var(--navy-deep))",
+        "aqua-soft": "hsl(var(--aqua-soft))",
+        "gray-light": "hsl(var(--gray-light))",
+        "orange-accent": "hsl(var(--orange-accent))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -92,51 +91,37 @@ export default {
             height: "0",
           },
         },
-        "fade-in": {
-          from: { opacity: "0" },
-          to: { opacity: "1" },
-        },
-        "slide-up": {
+        "fade-in-up": {
           from: { opacity: "0", transform: "translateY(20px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
-        "pulse-glow": {
-          "0%, 100%": { opacity: "0.7", transform: "scale(1)" },
-          "50%": { opacity: "1", transform: "scale(1.05)" },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" },
         },
-        "neon-glow": {
-          "0%, 100%": {
-            "box-shadow": "0 0 5px var(--neon-blue), 0 0 10px var(--neon-purple)",
-          },
-          "50%": {
-            "box-shadow": "0 0 10px var(--neon-blue), 0 0 20px var(--neon-purple)",
-          },
+        "bounce-in": {
+          "0%": { transform: "scale(0.3)", opacity: "0" },
+          "50%": { transform: "scale(1.05)", opacity: "1" },
+          "70%": { transform: "scale(0.9)" },
+          "100%": { transform: "scale(1)" },
         },
-        "particle-float": {
-          "0%": { transform: "translate(0, 0) rotate(0deg)" },
-          "25%": { transform: "translate(10px, -10px) rotate(5deg)" },
-          "50%": { transform: "translate(0, 0) rotate(0deg)" },
-          "75%": { transform: "translate(-10px, 10px) rotate(-5deg)" },
-          "100%": { transform: "translate(0, 0) rotate(0deg)" },
+        "underline-grow": {
+          from: { transform: "scaleX(0)" },
+          to: { transform: "scaleX(1)" },
         },
-        "background-grid": {
-          "0%": { "background-position": "0% 0%" },
-          "100%": { "background-position": "100% 100%" },
+        "spin-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.8s ease-out forwards",
-        "slide-up": "slide-up 0.8s ease-out forwards",
-        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
-        "neon-glow": "neon-glow 1.5s ease-in-out infinite",
-        "particle-float": "particle-float 15s ease-in-out infinite",
-        "background-grid": "background-grid 60s linear infinite",
-      },
-      boxShadow: {
-        "neon-glow": "0 0 8px hsl(var(--neon-blue)), 0 0 15px hsl(var(--neon-purple))",
-        "neon-glow-md": "0 0 10px hsl(var(--neon-blue)/0.5), 0 0 20px hsl(var(--neon-purple)/0.5)",
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+        "float": "float 3s ease-in-out infinite",
+        "bounce-in": "bounce-in 0.8s ease-out forwards",
+        "underline-grow": "underline-grow 0.3s ease-out forwards",
+        "spin-slow": "spin-slow 10s linear infinite",
       },
     },
   },

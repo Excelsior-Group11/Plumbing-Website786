@@ -18,10 +18,6 @@ export default {
       },
     },
     extend: {
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        mono: ['Space Mono', 'monospace'], // Custom font for display/headlines
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -29,8 +25,8 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "hsl(var(--blue-primary))", // Using new primary blue
+          foreground: "hsl(var(--primary-foreground))", // White
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -56,13 +52,22 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // New custom colors for the AI agency theme
-        "neon-blue": "hsl(var(--neon-blue))",
-        "neon-purple": "hsl(var(--neon-purple))",
-        "gradient-start": "hsl(var(--gradient-start))",
-        "gradient-end": "hsl(var(--gradient-end))",
-        "glow-start": "hsl(var(--glow-start))",
-        "glow-end": "hsl(var(--glow-end))",
+        // New custom colors
+        "blue-primary": "hsl(var(--blue-primary))",
+        "navy-deep": "hsl(var(--navy-deep))",
+        "aqua-soft": "hsl(var(--aqua-soft))",
+        "gray-light": "hsl(var(--gray-light))",
+        "orange-accent": "hsl(var(--orange-accent))",
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -108,11 +113,6 @@ export default {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
         },
-        "neon-glow": {
-          "0%": { boxShadow: "0 0 5px hsl(var(--neon-blue)), 0 0 10px hsl(var(--neon-purple))" },
-          "50%": { boxShadow: "0 0 10px hsl(var(--neon-purple)), 0 0 20px hsl(var(--neon-blue))" },
-          "100%": { boxShadow: "0 0 5px hsl(var(--neon-blue)), 0 0 10px hsl(var(--neon-purple))" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -122,7 +122,6 @@ export default {
         "bounce-in": "bounce-in 0.8s ease-out forwards",
         "underline-grow": "underline-grow 0.3s ease-out forwards",
         "spin-slow": "spin-slow 10s linear infinite",
-        "neon-glow": "neon-glow 1.5s ease-in-out infinite alternate",
       },
     },
   },

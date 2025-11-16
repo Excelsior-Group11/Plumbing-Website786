@@ -13,7 +13,7 @@ import { showSuccess, showError } from "@/utils/toast";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  phone: z.string().regex(/^(\+27|0)[6-8][0-9]{8}$/, { message: "Invalid South African phone number." }),
+  phone: z.string().regex(/^(\+27|0)[6-9][0-9]{8}$/, { message: "Invalid South African phone number." }),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
@@ -51,8 +51,8 @@ const ContactSection = () => {
             <div className="space-y-6 mb-10">
               <div className="flex items-center gap-4">
                 <Phone className="h-6 w-6 text-blue-primary" />
-                <a href="tel:0835550192" className="text-lg text-foreground hover:text-blue-primary transition-colors font-['Inter',_sans-serif]">
-                  083 555 0192
+                <a href="tel:+27795174640" className="text-lg text-foreground hover:text-blue-primary transition-colors font-['Inter',_sans-serif]">
+                  +27 79 517 4640
                 </a>
               </div>
               <div className="flex items-center gap-4">
@@ -92,7 +92,7 @@ const ContactSection = () => {
                     <FormItem>
                       <FormLabel className="text-navy-deep">Phone Number</FormLabel>
                       <FormControl>
-                        <Input placeholder="e.g., 0835550192" {...field} className="rounded-md border-gray-300 focus:border-blue-primary focus:ring-blue-primary" />
+                        <Input placeholder="e.g., +27795174640" {...field} className="rounded-md border-gray-300 focus:border-blue-primary focus:ring-blue-primary" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

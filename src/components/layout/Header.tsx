@@ -40,7 +40,7 @@ const Header = () => {
             </a>
           ))}
           <Button asChild className="ml-4 bg-green-500 hover:bg-green-600 text-white font-bold text-base px-6 py-3 rounded-full shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">
-            <a href="tel:0835550192" className="flex items-center gap-2">
+            <a href="tel:+27795174640" className="flex items-center gap-2">
               <Wrench className="h-5 w-5" /> Get Quick Help
             </a>
           </Button>
@@ -67,7 +67,7 @@ const Header = () => {
                 </a>
               ))}
               <Button asChild className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold text-base px-6 py-3 rounded-full shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">
-                <a href="tel:0835550192" onClick={handleNavLinkClick} className="flex items-center gap-2">
+                <a href="tel:+27795174640" onClick={handleNavLinkClick} className="flex items-center gap-2">
                   <Wrench className="h-5 w-5" /> Get Quick Help
                 </a>
               </Button>

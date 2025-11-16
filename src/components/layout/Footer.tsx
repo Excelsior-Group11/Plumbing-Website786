@@ -25,7 +25,7 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-bold mb-4 font-['Outfit',_sans-serif]">Jeff's Plumber</h3>
           <p className="text-sm mb-2 font-['Inter',_sans-serif]">Reliable plumbing services you can trust.</p>
-          <p className="text-sm font-['Inter',_sans-serif]">Johannesburg, South Africa</p>
+          <p className="text-sm font-['Inter',_sans-serif]">Ravenswood, Boksburg, Gauteng</p>
         </div>
 
         {/* Quick Links */}

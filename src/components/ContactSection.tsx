@@ -63,7 +63,7 @@ const ContactSection = () => {
               </div>
               <div className="flex items-center gap-4">
                 <MapPin className="h-6 w-6 text-blue-primary" />
-                <span className="text-lg text-foreground font-['Inter',_sans-serif]">Johannesburg, South Africa</span>
+                <span className="text-lg text-foreground font-['Inter',_sans-serif]">Ravenswood, Boksburg, Gauteng</span>
               </div>
             </div>
 
@@ -121,14 +121,14 @@ const ContactSection = () => {
           {/* Google Map */}
           <div className="w-full h-[400px] rounded-lg overflow-hidden shadow-xl animate-fade-in-up delay-400">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229107.00000000002!2d27.870000000000004!3d-26.171000000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x23100e74e94526c3!2sJohannesburg!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114600.00000000001!2d28.200000000000003!3d-26.200000000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95171111111111%3A0x1111111111111111!2sRavenswood%2C%20Boksburg%2C%20Gauteng!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen={false}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Google Map of Johannesburg"
+              title="Google Map of Ravenswood, Boksburg, Gauteng"
             ></iframe>
           </div>
         </div>

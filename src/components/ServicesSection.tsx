@@ -29,7 +29,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-black-primary text-text-light">
+    <section id="services" className="py-16 md:py-24 bg-brand-background-primary text-brand-text-light">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-bold mb-12 animate-slide-up">
           We Build Smart Systems That Run Your Business Automatically.
@@ -38,15 +38,15 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="p-6 flex flex-col items-center text-center bg-dark-gray-bg/50 border border-neon-blue/30 rounded-xl shadow-lg
-                         hover:shadow-neon-glow-md hover:scale-[1.02] transition-all duration-300 animate-slide-up"
+              className="p-6 flex flex-col items-center text-center bg-brand-background-secondary/50 border border-brand-primary-color/30 rounded-xl shadow-lg
+                         hover:shadow-brand-glow-md hover:scale-[1.02] transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${0.1 * index + 0.2}s` }}
             >
-              <div className="mb-4 bg-neon-blue/10 text-neon-blue p-4 rounded-full shadow-md animate-pulse-glow">
+              <div className="mb-4 bg-brand-primary-color/10 text-brand-primary-color p-4 rounded-full shadow-md animate-pulse-glow">
                 <service.icon size={36} />
               </div>
               <CardHeader className="p-0 mb-2">
-                <CardTitle className="text-xl font-semibold text-text-light">
+                <CardTitle className="text-xl font-semibold text-brand-text-light">
                   {service.title}
                 </CardTitle>
               </CardHeader>
@@ -56,7 +56,7 @@ const ServicesSection = () => {
             </Card>
           ))}
         </div>
-        <a href="#contact" className="text-neon-blue hover:text-neon-purple transition-colors flex items-center justify-center gap-2 text-lg font-medium animate-slide-up delay-500">
+        <a href="#contact" className="text-brand-primary-color hover:text-brand-accent-color transition-colors flex items-center justify-center gap-2 text-lg font-medium animate-slide-up delay-500">
           Explore Services <ArrowRight className="h-5 w-5" />
         </a>
       </div>

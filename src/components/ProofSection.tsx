@@ -21,7 +21,7 @@ const ProofSection = () => {
   ];
 
   return (
-    <section id="proof" className="py-16 md:py-24 bg-black-primary text-text-light">
+    <section id="proof" className="py-16 md:py-24 bg-brand-background-primary text-brand-text-light">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-bold mb-12 animate-slide-up">
           Real Results from Real Businesses
@@ -30,15 +30,15 @@ const ProofSection = () => {
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="p-6 flex flex-col items-center text-center bg-dark-gray-bg/50 border border-neon-purple/30 rounded-xl shadow-lg
-                         hover:shadow-neon-glow-md hover:scale-[1.02] transition-all duration-300 animate-slide-up"
+              className="p-6 flex flex-col items-center text-center bg-brand-background-secondary/50 border border-brand-accent-color/30 rounded-xl shadow-lg
+                         hover:shadow-brand-glow-md hover:scale-[1.02] transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${0.1 * index + 0.2}s` }}
             >
-              <Quote size={36} className="text-neon-purple mb-4" />
+              <Quote size={36} className="text-brand-accent-color mb-4" />
               <CardDescription className="text-lg italic text-muted-foreground mb-4">
                 "{testimonial.quote}"
               </CardDescription>
-              <CardTitle className="text-md font-semibold text-text-light">
+              <CardTitle className="text-md font-semibold text-brand-text-light">
                 - {testimonial.author}
               </CardTitle>
             </Card>

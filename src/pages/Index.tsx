@@ -14,7 +14,7 @@ import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-black-primary text-text-light">
+    <div className="flex flex-col min-h-screen bg-brand-background-primary text-brand-text-light">
       <Header />
       <main className="flex-grow">
         <HeroSection />

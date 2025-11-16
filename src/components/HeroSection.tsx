@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative bg-black-primary text-text-light min-h-screen flex items-center justify-center py-24 md:py-0 overflow-hidden"
+      className="relative bg-brand-background-primary text-brand-text-light min-h-screen flex items-center justify-center py-24 md:py-0 overflow-hidden"
     >
       <AIAnimation />
 
@@ -22,10 +22,10 @@ const HeroSection = () => {
             Tricore Solutions builds intelligent systems that reduce workload, cut costs, and accelerate growth.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-8">
-            <Button asChild size="lg" className="bg-gradient-to-r from-neon-blue to-neon-purple text-text-light font-bold text-lg px-8 py-6 rounded-full shadow-neon-glow hover:scale-105 transition-all duration-300">
+            <Button asChild size="lg" className="bg-gradient-to-r from-brand-primary-color to-brand-secondary-color text-brand-text-light font-bold text-lg px-8 py-6 rounded-full shadow-brand-glow hover:scale-105 transition-all duration-300">
               <a href="#contact">Book a Free Consultation</a>
             </Button>
-            <a href="#services" className="text-neon-blue hover:text-neon-purple transition-colors flex items-center gap-2 text-lg font-medium">
+            <a href="#services" className="text-brand-primary-color hover:text-brand-accent-color transition-colors flex items-center gap-2 text-lg font-medium">
               See How Automation Works <ArrowRight className="h-5 w-5" />
             </a>
           </div>

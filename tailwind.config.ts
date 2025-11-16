@@ -52,12 +52,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom Colors for Tricore Solutions
-        "black-primary": "hsl(var(--black-primary))",
-        "dark-gray-bg": "hsl(var(--dark-gray-bg))",
-        "neon-blue": "hsl(var(--neon-blue))",
-        "neon-purple": "hsl(var(--neon-purple))",
-        "text-light": "hsl(var(--text-light))",
+        // Custom Brand Colors for Tricore Solutions
+        "brand-background-primary": "hsl(var(--brand-background-primary))",
+        "brand-background-secondary": "hsl(var(--brand-background-secondary))",
+        "brand-primary-color": "hsl(var(--brand-primary-color))",
+        "brand-secondary-color": "hsl(var(--brand-secondary-color))",
+        "brand-accent-color": "hsl(var(--brand-accent-color))",
+        "brand-text-light": "hsl(var(--brand-text-light))",
         // Keeping sidebar colors for now, though not directly used on landing page
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -104,12 +105,12 @@ export default {
           "0%, 100%": { opacity: "0.7", transform: "scale(1)" },
           "50%": { opacity: "1", transform: "scale(1.05)" },
         },
-        "neon-glow": {
+        "brand-glow": { /* New keyframe for brand glow */
           "0%, 100%": {
-            "box-shadow": "0 0 5px var(--neon-blue), 0 0 10px var(--neon-purple)",
+            "box-shadow": "0 0 5px hsl(var(--brand-primary-color)), 0 0 10px hsl(var(--brand-accent-color))",
           },
           "50%": {
-            "box-shadow": "0 0 10px var(--neon-blue), 0 0 20px var(--neon-purple)",
+            "box-shadow": "0 0 10px hsl(var(--brand-primary-color)), 0 0 20px hsl(var(--brand-accent-color))",
           },
         },
         "particle-float": {
@@ -130,13 +131,13 @@ export default {
         "fade-in": "fade-in 0.8s ease-out forwards",
         "slide-up": "slide-up 0.8s ease-out forwards",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
-        "neon-glow": "neon-glow 1.5s ease-in-out infinite",
+        "brand-glow": "brand-glow 1.5s ease-in-out infinite", /* New animation */
         "particle-float": "particle-float 15s ease-in-out infinite",
         "background-grid": "background-grid 60s linear infinite",
       },
       boxShadow: {
-        "neon-glow": "0 0 8px hsl(var(--neon-blue)), 0 0 15px hsl(var(--neon-purple))",
-        "neon-glow-md": "0 0 10px hsl(var(--neon-blue)/0.5), 0 0 20px hsl(var(--neon-purple)/0.5)",
+        "brand-glow": "0 0 8px hsl(var(--brand-primary-color)), 0 0 15px hsl(var(--brand-accent-color))",
+        "brand-glow-md": "0 0 10px hsl(var(--brand-primary-color)/0.5), 0 0 20px hsl(var(--brand-accent-color)/0.5)",
       },
     },
   },

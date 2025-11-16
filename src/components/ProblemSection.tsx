@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Clock, Briefcase, Unlink } from "lucide-react"; // Changed LinkOff to Unlink
+import { Clock, Briefcase, Unlink } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const ProblemSection = () => {
@@ -17,14 +17,14 @@ const ProblemSection = () => {
       description: "Your team is stuck doing repetitive tasks instead of focusing on growth and innovation.",
     },
     {
-      icon: Unlink, // Changed LinkOff to Unlink
+      icon: Unlink,
       title: "Disconnected Systems",
       description: "Different apps and CRMs cause errors, delays, and missed opportunities, hindering efficiency.",
     },
   ];
 
   return (
-    <section id="problems" className="py-16 md:py-24 bg-dark-gray-bg text-text-light">
+    <section id="problems" className="py-16 md:py-24 bg-brand-background-secondary text-brand-text-light">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-bold mb-12 animate-slide-up">
           You’re Losing Time, Money & Customers Without Automation.
@@ -33,15 +33,15 @@ const ProblemSection = () => {
           {painPoints.map((point, index) => (
             <Card
               key={index}
-              className="p-6 flex flex-col items-center text-center bg-black-primary/50 border border-neon-purple/30 rounded-xl shadow-lg
-                         hover:shadow-neon-glow-md hover:scale-[1.02] transition-all duration-300 animate-slide-up"
+              className="p-6 flex flex-col items-center text-center bg-brand-background-primary/50 border border-brand-accent-color/30 rounded-xl shadow-lg
+                         hover:shadow-brand-glow-md hover:scale-[1.02] transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${0.1 * index + 0.2}s` }}
             >
-              <div className="mb-4 bg-neon-purple/10 text-neon-purple p-4 rounded-full shadow-md animate-pulse-glow">
+              <div className="mb-4 bg-brand-accent-color/10 text-brand-accent-color p-4 rounded-full shadow-md animate-pulse-glow">
                 <point.icon size={36} />
               </div>
               <CardHeader className="p-0 mb-2">
-                <CardTitle className="text-xl font-semibold text-text-light">
+                <CardTitle className="text-xl font-semibold text-brand-text-light">
                   {point.title}
                 </CardTitle>
               </CardHeader>

@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils"; // Import cn for conditional class merging
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = React.useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
     };
@@ -38,7 +38,8 @@ const Header = () => {
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link to="/" className="text-2xl font-bold text-brand-text-light hover:text-brand-primary-color transition-colors">
+        <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-brand-text-light hover:text-brand-primary-color transition-colors">
+          <img src="/Logo.jpg" alt="Tricore Solutions Logo" className="h-8 w-auto" />
           Tricore Solutions
         </Link>
 

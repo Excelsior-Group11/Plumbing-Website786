@@ -40,7 +40,7 @@ const Header = () => {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="/Logo.png" {/* Updated to Logo.png */}
+            src="/Logo.png"
             alt="Tricore Solutions Logo"
             className="h-8 w-auto"
             loading="lazy"

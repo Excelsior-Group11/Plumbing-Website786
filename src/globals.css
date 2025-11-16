@@ -4,43 +4,42 @@
 
 @layer base {
   :root {
-    /* Brand Colors from Logo */
-    --black-primary: 198 40% 17%; /* Deep Teal/Blue-Green */
-    --dark-gray-bg: 198 30% 25%; /* Slightly lighter Teal/Blue-Green for cards/sections */
-    --neon-blue: 190 76% 67%; /* Bright Cyan/Light Blue (Primary Accent) */
-    --neon-purple: 207 71% 53%; /* Darker Blue (Secondary Accent) */
-    --text-light: 60 30% 96%; /* Off-white for main text */
+    --background: 222.2 84% 4.9%; /* Dark background */
+    --foreground: 0 0% 100%; /* White text */
 
-    /* Shadcn/UI Base Colors adapted to brand palette */
-    --background: var(--black-primary);
-    --foreground: var(--text-light);
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 100%;
 
-    --card: var(--black-primary);
-    --card-foreground: var(--text-light);
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 100%;
 
-    --popover: var(--black-primary);
-    --popover-foreground: var(--text-light);
+    --primary: 210 40% 98%; /* White for primary-foreground */
+    --primary-foreground: 222.2 47.4% 11.2%; /* Default dark text */
 
-    --primary: var(--neon-blue); /* Using primary accent for primary elements */
-    --primary-foreground: var(--black-primary); /* Text on primary elements */
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --secondary: var(--dark-gray-bg);
-    --secondary-foreground: var(--text-light);
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --muted: var(--dark-gray-bg);
-    --muted-foreground: 198 20% 50%; /* Muted gray-blue */
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
 
-    --accent: var(--dark-gray-bg);
-    --accent-foreground: var(--text-light);
-
-    --destructive: 0 62.8% 30.6%; /* Keeping default destructive for now */
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 198 30% 20%; /* Slightly darker border */
-    --input: 198 30% 20%;
-    --ring: var(--neon-blue); /* Ring color matches primary accent */
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
 
     --radius: 0.75rem;
+
+    /* Custom Colors for Tricore Solutions */
+    --black-primary: 222.2 84% 4.9%; /* Near black */
+    --dark-gray-bg: 217.2 32.6% 17.5%; /* Darker gray for cards/sections */
+    --neon-blue: 217 91.2% 59.8%; /* Bright blue */
+    --neon-purple: 270 80% 60%; /* Bright purple */
+    --text-light: 0 0% 98%; /* Off-white for main text */
 
     /* Sidebar colors (keeping existing for now, not directly used in landing page) */
     --sidebar-background: 240 5.9% 10%;
@@ -54,41 +53,41 @@
   }
 
   .dark {
-    /* Dark theme already set, ensuring consistency with new palette */
-    --background: var(--black-primary);
-    --foreground: var(--text-light);
+    /* Already set for dark theme, ensuring consistency */
+    --background: 222.2 84% 4.9%;
+    --foreground: 0 0% 100%;
 
-    --card: var(--black-primary);
-    --card-foreground: var(--text-light);
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: var(--black-primary);
-    --popover-foreground: var(--text-light);
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: var(--neon-blue);
-    --primary-foreground: var(--black-primary);
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: var(--dark-gray-bg);
-    --secondary-foreground: var(--text-light);
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: var(--dark-gray-bg);
-    --muted-foreground: 198 20% 50%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: var(--dark-gray-bg);
-    --accent-foreground: var(--text-light);
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 198 30% 20%;
-    --input: 198 30% 20%;
-    --ring: var(--neon-blue);
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
 
     /* Custom Dark Mode Colors (same as light mode for this dark-first theme) */
-    --black-primary: 198 40% 17%;
-    --dark-gray-bg: 198 30% 25%;
-    --neon-blue: 190 76% 67%;
-    --neon-purple: 207 71% 53%;
-    --text-light: 60 30% 96%;
+    --black-primary: 222.2 84% 4.9%;
+    --dark-gray-bg: 217.2 32.6% 17.5%;
+    --neon-blue: 217 91.2% 59.8%;
+    --neon-purple: 270 80% 60%;
+    --text-light: 0 0% 98%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -153,42 +152,4 @@
   .animate-particle-float {
     animation-duration: 20s; /* Slower on mobile */
   }
-}
-
-/* Keyframe definitions */
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slide-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.7; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
-}
-
-@keyframes neon-glow {
-  0%, 100% {
-    box-shadow: 0 0 5px hsl(var(--neon-blue)), 0 0 10px hsl(var(--neon-purple));
-  }
-  50% {
-    box-shadow: 0 0 10px hsl(var(--neon-blue)), 0 0 20px hsl(var(--neon-purple));
-  }
-}
-
-@keyframes particle-float {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(10px, -10px) rotate(5deg); }
-  50% { transform: translate(0, 0) rotate(0deg); }
-  75% { transform: translate(-10px, 10px) rotate(-5deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
-}
-
-@keyframes background-grid {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 100% 100%; }
 }

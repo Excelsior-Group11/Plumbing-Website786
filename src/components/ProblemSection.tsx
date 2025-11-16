@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Clock, Briefcase, Unlink } from "lucide-react";
+import { Clock, Briefcase, Unlink } from "lucide-react"; // Changed LinkOff to Unlink
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const ProblemSection = () => {
@@ -17,7 +17,7 @@ const ProblemSection = () => {
       description: "Your team is stuck doing repetitive tasks instead of focusing on growth and innovation.",
     },
     {
-      icon: Unlink,
+      icon: Unlink, // Changed LinkOff to Unlink
       title: "Disconnected Systems",
       description: "Different apps and CRMs cause errors, delays, and missed opportunities, hindering efficiency.",
     },

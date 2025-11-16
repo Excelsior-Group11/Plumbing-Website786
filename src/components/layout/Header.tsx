@@ -3,17 +3,15 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Wrench } from "lucide-react"; // Import Wrench icon
+import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "/" },
     { name: "Services", href: "#services" },
     { name: "About", href: "#about" },
-    { name: "Testimonials", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -22,10 +20,10 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-navy-deep/20 bg-navy-deep text-white shadow-lg">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-800 bg-background text-foreground shadow-lg">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link to="/" className="text-2xl font-bold text-white hover:text-orange-accent transition-colors">
-          Jeff's Plumber
+        <Link to="/" className="text-2xl font-bold text-foreground hover:text-neon-blue transition-colors font-mono">
+          Tricore Solutions
         </Link>
 
         {/* Desktop Navigation */}
@@ -34,43 +32,39 @@ const Header = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-white hover:text-orange-accent transition-colors animate-underline-grow"
+              className="text-sm font-medium text-foreground hover:text-neon-blue transition-colors animate-underline-grow font-sans"
             >
               {link.name}
             </a>
           ))}
-          <Button asChild className="ml-4 bg-green-500 hover:bg-green-600 text-white font-bold text-base px-6 py-3 rounded-full shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">
-            <a href="tel:+27795174640" className="flex items-center gap-2">
-              <Wrench className="h-5 w-5" /> Get Quick Help
-            </a>
-          </Button>
+          <Link to="/login" className="text-sm font-medium text-foreground hover:text-neon-blue transition-colors font-mono border border-transparent px-3 py-1 rounded-sm">
+            [ LOGIN ]
+          </Link>
         </nav>
 
         {/* Mobile Navigation */}
         <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="outline" size="icon" className="bg-white text-navy-deep hover:bg-gray-100">
+            <Button variant="outline" size="icon" className="bg-card text-foreground hover:bg-muted">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-navy-deep text-white border-l-navy-deep/50">
+          <SheetContent side="right" className="bg-background text-foreground border-l-gray-800">
             <nav className="flex flex-col gap-4 pt-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={handleNavLinkClick}
-                  className="text-lg font-medium text-white hover:text-orange-accent transition-colors animate-underline-grow"
+                  className="text-lg font-medium text-foreground hover:text-neon-blue transition-colors animate-underline-grow font-sans"
                 >
                   {link.name}
                 </a>
               ))}
-              <Button asChild className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold text-base px-6 py-3 rounded-full shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300">
-                <a href="tel:+27795174640" onClick={handleNavLinkClick} className="flex items-center gap-2">
-                  <Wrench className="h-5 w-5" /> Get Quick Help
-                </a>
-              </Button>
+              <Link to="/login" onClick={handleNavLinkClick} className="text-lg font-medium text-foreground hover:text-neon-blue transition-colors font-mono border border-transparent px-3 py-1 rounded-sm">
+                [ LOGIN ]
+              </Link>
             </nav>
           </SheetContent>
         </Sheet>

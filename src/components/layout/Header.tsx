@@ -25,7 +25,7 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Services", href: "#services" },
+    { name: "Services", href: "/services" }, // Updated to new services page route
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
@@ -65,7 +65,7 @@ const Header = () => {
             </a>
           ))}
           <Button asChild className="ml-4 bg-gradient-to-r from-brand-primary-color to-brand-secondary-color text-brand-text-light font-bold text-base px-6 py-3 rounded-full shadow-brand-glow hover:scale-105 transition-all duration-300">
-            <a href="#contact">Login</a>
+            <a href="#contact">Book a Call</a> {/* Changed "Login" to "Book a Call" */}
           </Button>
         </nav>
 
@@ -89,7 +89,7 @@ const Header = () => {
                 </a>
               ))}
               <Button asChild className="mt-4 bg-gradient-to-r from-brand-primary-color to-brand-secondary-color text-brand-text-light font-bold text-base px-6 py-3 rounded-full shadow-brand-glow hover:scale-105 transition-all duration-300">
-                <a href="#contact">Login</a>
+                <a href="#contact">Book a Call</a> {/* Changed "Login" to "Book a Call" */}
               </Button>
             </nav>
           </SheetContent>

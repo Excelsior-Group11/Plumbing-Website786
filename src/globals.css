@@ -41,14 +41,6 @@
     --neon-purple: 270 80% 60%; /* Bright purple */
     --text-light: 0 0% 98%; /* Off-white for main text */
 
-    /* NEW BRAND COLORS from Logo */
-    --brand-primary-bg: 200 45% 17%; /* Dark teal/blue from logo background */
-    --brand-text-light: 0 0% 100%; /* White from logo text */
-    --brand-accent-cyan: 179 59% 55%; /* Lighter blue/cyan from logo swirl */
-    --brand-accent-blue: 210 61% 43%; /* Slightly darker blue from logo */
-    --brand-accent-light-blue: 198 50% 92%; /* Very light blue from logo 'T' */
-
-
     /* Sidebar colors (keeping existing for now, not directly used in landing page) */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -97,13 +89,6 @@
     --neon-purple: 270 80% 60%;
     --text-light: 0 0% 98%;
 
-    /* NEW BRAND COLORS from Logo (same for dark mode as it's a dark-first theme) */
-    --brand-primary-bg: 200 45% 17%;
-    --brand-text-light: 0 0% 100%;
-    --brand-accent-cyan: 179 59% 55%;
-    --brand-accent-blue: 210 61% 43%;
-    --brand-accent-light-blue: 198 50% 92%;
-
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -148,11 +133,6 @@
 
 .animate-neon-glow {
   animation: neon-glow 1.5s ease-in-out infinite;
-}
-
-/* NEW: Brand specific glow for nav bar button */
-.animate-brand-glow {
-  animation: brand-glow 1.5s ease-in-out infinite;
 }
 
 .animate-particle-float {

@@ -1,12 +1,29 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils"; // Import cn for conditional class merging
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Set initial state in case the page loads scrolled down
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const navLinks = [
     { name: "Services", href: "#services" },
     { name: "About", href: "#about" },
@@ -14,7 +31,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-brand-accent-color/30 bg-brand-background-secondary text-brand-text-light shadow-lg">
+    <header
+      className={cn(
+        "sticky top-0 z-50 w-full border-b border-brand-accent-color/30 text-brand-text-light shadow-lg transition-all duration-300",
+        scrolled ? "bg-brand-background-primary/90 backdrop-blur-sm" : "bg-brand-background-secondary"
+      )}
+    >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/" className="text-2xl font-bold text-brand-text-light hover:text-brand-primary-color transition-colors">
           Tricore Solutions

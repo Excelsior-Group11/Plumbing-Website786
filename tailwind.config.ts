@@ -134,6 +134,7 @@ export default {
         "brand-glow": "brand-glow 1.5s ease-in-out infinite", /* New animation */
         "particle-float": "particle-float 15s ease-in-out infinite",
         "background-grid": "background-grid 60s linear infinite",
+        "bounce": "bounce 1s infinite", // Ensure bounce is available
       },
       boxShadow: {
         "brand-glow": "0 0 8px hsl(var(--brand-primary-color)), 0 0 15px hsl(var(--brand-accent-color))",

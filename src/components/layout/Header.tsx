@@ -25,7 +25,7 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Services", href: "/services" }, // Updated to link to the new ServicesPage
+    { name: "Services", href: "#services" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
@@ -56,13 +56,13 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.name}
-              to={link.href} // Use Link for internal navigation
+              href={link.href}
               className="text-sm font-medium text-brand-text-light hover:text-brand-primary-color transition-colors"
             >
               {link.name}
-            </Link>
+            </a>
           ))}
           <Button asChild className="ml-4 bg-gradient-to-r from-brand-primary-color to-brand-secondary-color text-brand-text-light font-bold text-base px-6 py-3 rounded-full shadow-brand-glow hover:scale-105 transition-all duration-300">
             <a href="#contact">Login</a>
@@ -80,13 +80,13 @@ const Header = () => {
           <SheetContent side="right" className="bg-brand-background-primary text-brand-text-light border-l-brand-accent-color/30">
             <nav className="flex flex-col gap-4 pt-6">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.name}
-                  to={link.href} // Use Link for internal navigation
+                  href={link.href}
                   className="text-lg font-medium text-brand-text-light hover:text-brand-primary-color transition-colors"
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
               <Button asChild className="mt-4 bg-gradient-to-r from-brand-primary-color to-brand-secondary-color text-brand-text-light font-bold text-base px-6 py-3 rounded-full shadow-brand-glow hover:scale-105 transition-all duration-300">
                 <a href="#contact">Login</a>

@@ -166,9 +166,3 @@
     box-shadow: 0 0 10px hsl(var(--brand-primary-color)), 0 0 20px hsl(var(--brand-accent-color));
   }
 }
-
-/* New keyframe for appointment setting progress bar */
-@keyframes fill-progress {
-  0% { width: 0%; }
-  100% { width: 100%; }
-}

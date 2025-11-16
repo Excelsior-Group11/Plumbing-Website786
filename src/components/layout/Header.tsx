@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils"; // Import cn for conditional class merging
+import Logo from "/Logo.jpg"; // Direct import of the logo from the public folder
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +40,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/Logo.jpg" alt="Tricore Solutions Logo" className="h-8 w-auto" loading="lazy" />
+          <img src={Logo} alt="Tricore Solutions Logo" className="h-8 w-auto" loading="lazy" />
           <span className="text-2xl font-bold text-brand-text-light hover:text-brand-primary-color transition-colors">
             Tricore Solutions
           </span>

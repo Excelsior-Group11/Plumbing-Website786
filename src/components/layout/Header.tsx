@@ -34,8 +34,7 @@ const Header = () => {
     <header
       className={cn(
         "sticky top-0 z-50 w-full border-b border-brand-accent-color/30 text-brand-text-light shadow-lg transition-all duration-300",
-        // Always use brand-background-primary for a consistent dark header background
-        "bg-brand-background-primary" 
+        scrolled ? "bg-brand-background-primary/90 backdrop-blur-sm" : "bg-brand-background-secondary"
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
@@ -43,7 +42,7 @@ const Header = () => {
           <img
             src="/Logo.png" // Using the new logo image
             alt="Tricore Solutions Logo"
-            className="max-h-12 h-auto w-auto rounded-full" // Added rounded-full
+            className="max-h-12 h-auto w-auto" // Adjusted classes to remove fixed crop
             loading="lazy"
             onError={(e) => {
               e.currentTarget.src = "/placeholder.svg"; // Fallback to a placeholder if it fails
